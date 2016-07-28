@@ -57,7 +57,7 @@ function PanelEx ( config ) {
      */
     this.index = 0;
 
-    if ( DEBUG ) {
+    if ( DEVELOP ) {
         if ( typeof config !== 'object' ) { throw new Error(__filename + ': wrong config type'); }
         // init parameters checks
         if ( config.className && typeof config.className !== 'string' ) { throw new Error(__filename + ': wrong or empty config.className'); }
@@ -166,7 +166,7 @@ PanelEx.prototype.blur = function () {
     Component.prototype.blur.call(this);
 };
 
-if ( DEBUG ) {
+if ( DEVELOP ) {
     // expose to the global scope
     window.ComponentPanelEx = PanelEx;
 }
