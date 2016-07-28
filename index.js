@@ -166,11 +166,6 @@ PanelEx.prototype.blur = function () {
     Component.prototype.blur.call(this);
 };
 
-if ( DEVELOP ) {
-    // expose to the global scope
-    window.ComponentPanelEx = PanelEx;
-}
-
 
 // public
 module.exports = PanelEx;
