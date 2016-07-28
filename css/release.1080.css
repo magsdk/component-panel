@@ -1,0 +1,81 @@
+.component.panelEx {
+    width: 540px;
+    height: 672px;
+    box-sizing: border-box;
+    padding: 0;
+    display: inline-block;
+    position: absolute;
+    z-index: 0; }
+    .component.panelEx > .body {
+        overflow: hidden; }
+    .component.panelEx > .title {
+        height: 84px;
+        line-height: 84px;
+        position: relative;
+        padding-left: 30px;
+        text-transform: uppercase;
+        background-repeat: repeat-x;
+        overflow: hidden;
+        text-overflow: ellipsis; }
+    .component.panelEx .list .item {
+        height: 84px;
+        line-height: 84px;
+        font-size: 29.7px; }
+        .component.panelEx .list .item .icon {
+            font-size: 57.75px; }
+    .component.panelEx.main {
+        width: 720px;
+        top: 102px;
+        left: 600px;
+        height: 816px;
+        z-index: 2; }
+        .component.panelEx.main .list .item {
+            height: 102px;
+            line-height: 102px;
+            font-size: 33px; }
+            .component.panelEx.main .list .item .icon {
+                font-size: 41.25px; }
+        .component.panelEx.main > .title {
+            height: 102px;
+            line-height: 102px;
+            font-size: 36px; }
+        .component.panelEx.main.size2 {
+            width: 1170px; }
+        .component.panelEx.main.size3 {
+            width: 1170px; }
+    .component.panelEx.left {
+        top: 192px;
+        left: 60px; }
+    .component.panelEx.right {
+        top: 192px;
+        right: 60px; }
+    .component.panelEx > .overlay {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0; }
+    .component.panelEx .component.scrollBar {
+        display: none; }
+    .component.panelEx.active > .overlay {
+        visibility: hidden; }
+    .component.panelEx.active .component.scrollBar {
+        display: block; }
+    .component.panelEx.top {
+        z-index: 3; }
+    .component.panelEx > .shadow {
+        width: 30px;
+        position: absolute;
+        top: 0;
+        z-index: -1;
+        display: none; }
+        .component.panelEx > .shadow.left {
+            left: -30px; }
+        .component.panelEx > .shadow.right {
+            right: -30px; }
+    .component.panelEx.leftShadow > .shadow.left {
+        display: block; }
+    .component.panelEx.rightShadow > .shadow.right {
+        display: block; }
+    .component.panelEx.active > .shadow {
+        z-index: 1; }
