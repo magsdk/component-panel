@@ -18,10 +18,28 @@
         line-height: $panelTitleHeight;
         position: relative;
         padding-left: $safePadding;
-        text-transform: uppercase;
+        padding-right: $safePadding;
         background-repeat: repeat-x;
         overflow: hidden;
         text-overflow: ellipsis;
+
+        .name {
+            text-transform: uppercase;
+        }
+
+        .amountContainer {
+            width: $panelAmountCWidth;
+
+            .amount {
+                float: right;
+                height: $panelAmountHeight;
+                min-width: $panelAmountWidth;
+                border-radius: $panelAmountHeight/2;
+                font-size: $fontSize * 0.9;
+                padding: 0 $panelAmountHeight/4;
+                line-height: $fontSize * 1.22;
+            }
+        }
     }
     .list .item{
         height: $panelTitleHeight;

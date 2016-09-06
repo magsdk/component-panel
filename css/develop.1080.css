@@ -14,10 +14,22 @@
         line-height: 84px;
         position: relative;
         padding-left: 30px;
-        text-transform: uppercase;
+        padding-right: 30px;
         background-repeat: repeat-x;
         overflow: hidden;
         text-overflow: ellipsis; }
+        .component.panelEx > .title .name {
+            text-transform: uppercase; }
+        .component.panelEx > .title .amountContainer {
+            width: 135px; }
+            .component.panelEx > .title .amountContainer .amount {
+                float: right;
+                height: 36px;
+                min-width: 21px;
+                border-radius: 18px;
+                font-size: 29.7px;
+                padding: 0 9px;
+                line-height: 40.26px; }
     .component.panelEx .list .item {
         height: 84px;
         line-height: 84px;

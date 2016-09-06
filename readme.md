@@ -1,12 +1,12 @@
-Footer component
-================
+Panel component
+===============
 
 [![NPM version](https://img.shields.io/npm/v/mag-component-panel.svg?style=flat-square)](https://www.npmjs.com/package/mag-component-panel)
 [![Dependencies Status](https://img.shields.io/david/spasdk/component-panel.svg?style=flat-square)](https://david-dm.org/spasdk/component-panel)
 [![Gitter](https://img.shields.io/badge/gitter-join%20chat-blue.svg?style=flat-square)](https://gitter.im/DarkPark/spasdk)
 
 
-Footer is a component to build user interface, an instance of [Component](https://github.com/spasdk/component) module.
+Panel is a component to build user interface, an instance of [Component](https://github.com/spasdk/component) module.
 
 
 ## Installation ##
