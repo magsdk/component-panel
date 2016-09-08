@@ -17,8 +17,8 @@
         height: $panelTitleHeight;
         line-height: $panelTitleHeight;
         position: relative;
-        padding-left: unit($safePadding, px);
-        padding-right: unit($safePadding, px);
+        padding-left: $safePadding;
+        padding-right: $safePadding;
         background-repeat: repeat-x;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -28,16 +28,16 @@
         }
 
         .amountContainer {
-            width: unit($panelAmountCWidth, px);
+            width: $panelAmountCWidth;
 
             .amount {
                 float: right;
-                height: unit($panelAmountHeight, px);
-                min-width: unit($panelAmountWidth, px);
-                border-radius: unit($panelAmountHeight/2, px);
-                font-size: unit($fontSize * 0.9, px);
-                padding: 0 unit($panelAmountHeight/4, px);
-                line-height: unit($fontSize * 1.22, px);
+                height: $panelAmountHeight;
+                min-width: $panelAmountWidth;
+                border-radius: $panelAmountHeight/2;
+                font-size: $fontSize * 0.9;
+                padding: 0 $panelAmountHeight/4;
+                line-height: $fontSize * 1.22;
             }
         }
     }
