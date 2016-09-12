@@ -2,11 +2,11 @@ Panel component
 ===============
 
 [![NPM version](https://img.shields.io/npm/v/mag-component-panel.svg?style=flat-square)](https://www.npmjs.com/package/mag-component-panel)
-[![Dependencies Status](https://img.shields.io/david/spasdk/component-panel.svg?style=flat-square)](https://david-dm.org/spasdk/component-panel)
-[![Gitter](https://img.shields.io/badge/gitter-join%20chat-blue.svg?style=flat-square)](https://gitter.im/DarkPark/spasdk)
+[![Dependencies Status](https://img.shields.io/david/magsdk/component-panel.svg?style=flat-square)](https://david-dm.org/magsdk/component-panel)
+[![Gitter](https://img.shields.io/badge/gitter-join%20chat-blue.svg?style=flat-square)](https://gitter.im/DarkPark/magsdk)
 
 
-Panel is a component to build user interface, an instance of [Component](https://github.com/spasdk/component) module.
+Panel is a component to build user interface, an instance of [Component](https://github.com/stbsdk/component) module.
 
 
 ## Installation ##
@@ -32,7 +32,7 @@ var panel = require('mag-component-panel');
 
 ## Contribution ##
 
-If you have any problem or suggestion please open an issue [here](https://github.com/spasdk/component-panel/issues).
+If you have any problem or suggestion please open an issue [here](https://github.com/magsdk/component-panel/issues).
 Pull requests are welcomed with respect to the [JavaScript Code Style](https://github.com/DarkPark/jscs).
 
 
