@@ -21,3 +21,53 @@ $panelMainTitleFontSize: $panelMainTitleFontSize * 1.2;
 $panelAmountHeight:      18px;
 $panelAmountWidth:       10px;
 $panelAmountCWidth:      70px;
+
+.component.panelEx {
+    &.main {
+        &.position-right {
+            left: 240px;
+        }
+        &.position-left {
+            left: 90px;
+        }
+    }
+    &.right {
+        >.title {
+            background: #151515;
+            -webkit-transform: rotate(90deg);
+            width: $panelHeight;
+            position: absolute;
+            top: 157px;
+            right: -158px;
+            text-align: center;
+            padding: 0;
+            z-index: 1;
+
+        }
+    }
+    &.left {
+        >.title {
+            background: #151515;
+            -webkit-transform: rotate(-90deg);
+            width: $panelHeight;
+            position: absolute;
+            top: 157px;
+            left: -158px;
+            text-align: center;
+            padding: 0;
+            z-index: 1;
+
+        }
+    }
+    &.expand >.title {
+        //background: red;
+        width: inherit;
+        -webkit-transform: none;
+        position: static;
+        text-align: left;
+        padding-left: $safePadding;
+    }
+    >.shadow {
+        //display: none!important;
+    }
+}
