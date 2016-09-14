@@ -3,21 +3,21 @@
 
 @import "480";
 
-$fontSize:               $fontSize * 1.2;
-$panelWidth:             $panelWidth * 1.2;
-$panelHeight:            $panelHeight * 1.2;
-$safePadding:            $safePadding * 1.2;
-$pagePadding:            $pagePadding * 1.2;
-$mainPanelTop:           $mainPanelTop * 1.2;
-$leftPanelTop:           $leftPanelTop * 1.2;
-$mainPanelLeft:          $mainPanelLeft * 1.2;
-$panelMainWidth:         $panelMainWidth * 1.2;
-$panelMainHeight:        $panelMainHeight * 1.2;
-$panelTitleHeight:       $panelTitleHeight * 1.2;
-$panelMain2xWidth:       $panelMain2xWidth * 1.2;
-$panelShadowWidth:       $panelShadowWidth * 1.2;
-$panelMainTitleHeight:   $panelMainTitleHeight * 1.2;
-$panelMainTitleFontSize: $panelMainTitleFontSize * 1.2;
+$fontSize:               18px;
+$panelWidth:             230px;
+$panelHeight:            360px;
+$safePadding:            20px;
+$pagePadding:            50px;
+$mainPanelTop:           80px;
+$leftPanelTop:           100px;
+$mainPanelLeft:          200px;
+$panelMainWidth:         390px;
+$panelMainHeight:        400px;
+$panelTitleHeight:       45px;
+$panelMain2xWidth:       430px;
+$panelShadowWidth:       $panelShadowWidth;
+$panelMainTitleHeight:   50px;
+$panelMainTitleFontSize: 24px;
 $panelAmountHeight:      18px;
 $panelAmountWidth:       10px;
 $panelAmountCWidth:      70px;
@@ -42,7 +42,7 @@ $panelAmountCWidth:      70px;
             text-align: center;
             padding: 0;
             z-index: 1;
-
+            > div { text-align: center; }
         }
     }
     &.left {
@@ -56,7 +56,7 @@ $panelAmountCWidth:      70px;
             text-align: center;
             padding: 0;
             z-index: 1;
-
+            > div { text-align: center; }
         }
     }
     &.expand >.title {
