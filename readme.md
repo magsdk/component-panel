@@ -1,6 +1,7 @@
 Panel component
 ===============
 
+[![Build Status](https://img.shields.io/travis/magsdk/component-panel.svg?style=flat-square)](https://travis-ci.org/magsdk/component-panel)
 [![NPM version](https://img.shields.io/npm/v/mag-component-panel.svg?style=flat-square)](https://www.npmjs.com/package/mag-component-panel)
 [![Dependencies Status](https://img.shields.io/david/magsdk/component-panel.svg?style=flat-square)](https://david-dm.org/magsdk/component-panel)
 [![Gitter](https://img.shields.io/badge/gitter-join%20chat-blue.svg?style=flat-square)](https://gitter.im/DarkPark/magsdk)
