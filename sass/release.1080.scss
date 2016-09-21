@@ -4,4 +4,7 @@
 $DEVELOP: false;
 
 @import "vars/1080";
+@import "../node_modules/stb-component-scrollbar/sass/vars/1080";
+@import "../node_modules/mag-component-list/sass/vars/1080";
+
 @import "main";

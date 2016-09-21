@@ -1,3 +1,73 @@
+.stb-component-list {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    background-color: #333;
+    width: 100%;
+    outline: 1px dashed #005000;
+    outline-offset: -1px; }
+    .stb-component-list.hidden {
+        display: none; }
+    .stb-component-list > .item {
+        cursor: pointer;
+        padding: 0 12px;
+        vertical-align: middle;
+        height: 72px;
+        line-height: 72px; }
+        .stb-component-list > .item.mark {
+            background-color: green;
+            color: black; }
+        .stb-component-list > .item.focus {
+            background-color: orange;
+            color: black; }
+        .stb-component-list > .item.focus.mark {
+            background-color: #ae7200;
+            color: white; }
+    .stb-component-list.horizontal {
+        display: table;
+        table-layout: fixed;
+        width: 100%; }
+        .stb-component-list.horizontal > .item {
+            display: table-cell;
+            text-align: center;
+            vertical-align: middle; }
+    .stb-component-list.focus {
+        outline: 1px dashed red; }
+
+.mag-component-list {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    background-color: #333;
+    width: 100%;
+    outline: 1px dashed #005000;
+    outline-offset: -1px; }
+    .mag-component-list.hidden {
+        display: none; }
+    .mag-component-list > .item {
+        cursor: pointer;
+        padding: 0 12px;
+        vertical-align: middle;
+        height: 72px;
+        line-height: 72px; }
+        .mag-component-list > .item.mark {
+            background-color: green;
+            color: black; }
+        .mag-component-list > .item.focus {
+            background-color: orange;
+            color: black; }
+        .mag-component-list > .item.focus.mark {
+            background-color: #ae7200;
+            color: white; }
+    .mag-component-list.horizontal {
+        display: table;
+        table-layout: fixed;
+        width: 100%; }
+        .mag-component-list.horizontal > .item {
+            display: table-cell;
+            text-align: center;
+            vertical-align: middle; }
+    .mag-component-list.focus {
+        outline: 1px dashed red; }
+
 .stb-component-panel {
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -7,6 +77,37 @@
     .stb-component-panel.hidden {
         display: none; }
     .stb-component-panel.focus {
+        outline: 1px dashed red; }
+
+.stb-component-scrollbar {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    display: inline-block;
+    height: 100%;
+    width: 12px;
+    vertical-align: bottom;
+    background-color: #bbb;
+    outline: 1px dashed #005000;
+    outline-offset: -1px; }
+    .stb-component-scrollbar.hidden {
+        display: none; }
+    .stb-component-scrollbar .thumb {
+        display: block;
+        width: 12px;
+        min-height: 12px;
+        background-color: #aaa; }
+        .stb-component-scrollbar .thumb.hidden {
+            display: none; }
+    .stb-component-scrollbar.horizontal {
+        display: block;
+        height: 12px;
+        width: 100%; }
+        .stb-component-scrollbar.horizontal .thumb {
+            display: inline-block;
+            vertical-align: top;
+            height: 12px;
+            min-width: 12px; }
+    .stb-component-scrollbar.focus {
         outline: 1px dashed red; }
 
 .mag-component-panel {
