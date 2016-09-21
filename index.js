@@ -33,7 +33,7 @@ var Component = require('stb-component'),
  *             ]
  *         });
  */
-function PanelEx ( config ) {
+function Panel ( config ) {
     var $overlay;
 
     config = config || {};
@@ -66,7 +66,7 @@ function PanelEx ( config ) {
     }
 
     // set default className if classList property empty or undefined
-    config.className = 'panelEx ' + (config.className || '');
+    //config.className = 'Panel ' + (config.className || '');
 
     config.$body = document.createElement('div');
     config.$body.className = 'body';
@@ -119,8 +119,11 @@ function PanelEx ( config ) {
 }
 
 // inheritance
-PanelEx.prototype = Object.create(Component.prototype);
-PanelEx.prototype.constructor = PanelEx;
+Panel.prototype = Object.create(Component.prototype);
+Panel.prototype.constructor = Panel;
+
+// set component name
+Panel.prototype.name = 'mag-component-panel';
 
 
 /**
@@ -128,7 +131,7 @@ PanelEx.prototype.constructor = PanelEx;
  *
  * @type {{focus: Function}} try to focus first child component if it present
  */
-PanelEx.prototype.defaultEvents = {
+Panel.prototype.defaultEvents = {
     focus : function () {
         if ( this.children.length ) {
             this.children[0].focus();
@@ -140,7 +143,7 @@ PanelEx.prototype.defaultEvents = {
 /**
  * Redefine default component focus to set panel as active even when give focus to children components
  */
-PanelEx.prototype.focus = function () {
+Panel.prototype.focus = function () {
     this.parent.panels[this.parent.focusIndex].$node.classList.remove('active');
     this.parent.panels[this.parent.focusIndex].$node.classList.remove('top');
     Component.prototype.focus.call(this);
@@ -167,11 +170,11 @@ PanelEx.prototype.focus = function () {
 /**
  * Blur panel
  */
-PanelEx.prototype.blur = function () {
+Panel.prototype.blur = function () {
     this.parent.panels[this.parent.focusIndex].$node.classList.remove('active');
     Component.prototype.blur.call(this);
 };
 
 
 // public
-module.exports = PanelEx;
+module.exports = Panel;

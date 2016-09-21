@@ -1,0 +1,136 @@
+// @license The MIT License (MIT)
+// @copyright Stanislav Kalashnik <darkpark.main@gmail.com>
+
+@mixin mag-component-panel {
+  width: $panelWidth;
+  height: $panelHeight;
+  box-sizing: border-box;
+  padding: 0;
+  display: inline-block;
+  position: absolute;
+  z-index: 0;
+  >.body {
+    overflow: hidden;
+  }
+  >.title {
+    height: $panelTitleHeight;
+    line-height: $panelTitleHeight;
+    position: relative;
+    padding-left: $safePadding;
+    padding-right: $safePadding;
+    background-repeat: repeat-x;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    .name {
+      text-transform: uppercase;
+    }
+
+    .amountContainer {
+      width: $panelAmountCWidth;
+
+      .amount {
+        float: right;
+        height: $panelAmountHeight;
+        min-width: $panelAmountWidth;
+        border-radius: $panelAmountHeight/2;
+        font-size: $fontSize * 0.9;
+        padding: 0 $panelAmountHeight/4;
+        line-height: $fontSize * 1.22;
+      }
+    }
+  }
+  .mag-component-list .item {
+    height: $panelTitleHeight;
+    line-height: $panelTitleHeight;
+    font-size: $fontSize * 0.9;
+    .icon {
+      font-size: $fontSize * 1.75;
+    }
+  }
+  &.main {
+    width: $panelMainWidth;
+    top: $mainPanelTop;
+    left: $mainPanelLeft;
+    height: $panelMainHeight;
+    z-index : 2;
+    .mag-component-list .item {
+      height: $panelMainTitleHeight;
+      line-height: $panelMainTitleHeight;
+      font-size: $fontSize;
+      .icon {
+        font-size: $fontSize * 1.25;
+      }
+    }
+    >.title {
+      height: $panelMainTitleHeight;
+      line-height: $panelMainTitleHeight;
+      font-size: $panelMainTitleFontSize
+    }
+    &.size2 {
+      width: $panelMain2xWidth;
+    }
+    &.size3 {
+      width: $panelMain2xWidth;
+    }
+
+  }
+
+  &.left {
+    top: $leftPanelTop;
+    left: $pagePadding;
+  }
+  &.right {
+    top: $leftPanelTop;
+    right: $pagePadding;
+  }
+
+  >.overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .stb-component-scrollbar {
+    display: none;
+  }
+  &.active {
+    >.overlay {
+      visibility: hidden;
+    }
+    .stb-component-scrollbar {
+      display: block;
+    }
+  }
+  &.top {
+    z-index: 3;
+  }
+  >.shadow {
+    width: $panelShadowWidth;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    display: none;
+    &.left {
+      left: -$panelShadowWidth;
+    }
+    &.right {
+      right: -$panelShadowWidth;
+    }
+  }
+
+  &.leftShadow {
+    >.shadow.left {
+      display: block;
+    }
+  }
+  &.rightShadow {
+    >.shadow.right {
+      display: block;
+    }
+  }
+  &.active >.shadow {
+    z-index: 1;
+  }
+}

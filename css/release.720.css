@@ -1,5 +1,13 @@
-/* mag-component-panel: release */
-.component.panelEx {
+.stb-component-panel {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    background-color: #eee; }
+    .stb-component-panel.hidden {
+        display: none; }
+
+.mag-component-panel {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
     width: 360px;
     height: 448px;
     box-sizing: border-box;
@@ -7,9 +15,11 @@
     display: inline-block;
     position: absolute;
     z-index: 0; }
-    .component.panelEx > .body {
+    .mag-component-panel.hidden {
+        display: none; }
+    .mag-component-panel > .body {
         overflow: hidden; }
-    .component.panelEx > .title {
+    .mag-component-panel > .title {
         height: 56px;
         line-height: 56px;
         position: relative;
@@ -18,11 +28,11 @@
         background-repeat: repeat-x;
         overflow: hidden;
         text-overflow: ellipsis; }
-        .component.panelEx > .title .name {
+        .mag-component-panel > .title .name {
             text-transform: uppercase; }
-        .component.panelEx > .title .amountContainer {
+        .mag-component-panel > .title .amountContainer {
             width: 90px; }
-            .component.panelEx > .title .amountContainer .amount {
+            .mag-component-panel > .title .amountContainer .amount {
                 float: right;
                 height: 24px;
                 min-width: 14px;
@@ -30,65 +40,65 @@
                 font-size: 19.8px;
                 padding: 0 6px;
                 line-height: 26.84px; }
-    .component.panelEx .list .item {
+    .mag-component-panel .mag-component-list .item {
         height: 56px;
         line-height: 56px;
         font-size: 19.8px; }
-        .component.panelEx .list .item .icon {
+        .mag-component-panel .mag-component-list .item .icon {
             font-size: 38.5px; }
-    .component.panelEx.main {
+    .mag-component-panel.main {
         width: 480px;
         top: 68px;
         left: 400px;
         height: 544px;
         z-index: 2; }
-        .component.panelEx.main .list .item {
+        .mag-component-panel.main .mag-component-list .item {
             height: 68px;
             line-height: 68px;
             font-size: 22px; }
-            .component.panelEx.main .list .item .icon {
+            .mag-component-panel.main .mag-component-list .item .icon {
                 font-size: 27.5px; }
-        .component.panelEx.main > .title {
+        .mag-component-panel.main > .title {
             height: 68px;
             line-height: 68px;
             font-size: 24px; }
-        .component.panelEx.main.size2 {
+        .mag-component-panel.main.size2 {
             width: 780px; }
-        .component.panelEx.main.size3 {
+        .mag-component-panel.main.size3 {
             width: 780px; }
-    .component.panelEx.left {
+    .mag-component-panel.left {
         top: 128px;
         left: 40px; }
-    .component.panelEx.right {
+    .mag-component-panel.right {
         top: 128px;
         right: 40px; }
-    .component.panelEx > .overlay {
+    .mag-component-panel > .overlay {
         width: 100%;
         height: 100%;
         position: absolute;
         top: 0;
         left: 0; }
-    .component.panelEx .component.scrollBar {
+    .mag-component-panel .stb-component-scrollbar {
         display: none; }
-    .component.panelEx.active > .overlay {
+    .mag-component-panel.active > .overlay {
         visibility: hidden; }
-    .component.panelEx.active .component.scrollBar {
+    .mag-component-panel.active .stb-component-scrollbar {
         display: block; }
-    .component.panelEx.top {
+    .mag-component-panel.top {
         z-index: 3; }
-    .component.panelEx > .shadow {
+    .mag-component-panel > .shadow {
         width: 20px;
         position: absolute;
         top: 0;
         z-index: -1;
         display: none; }
-        .component.panelEx > .shadow.left {
+        .mag-component-panel > .shadow.left {
             left: -20px; }
-        .component.panelEx > .shadow.right {
+        .mag-component-panel > .shadow.right {
             right: -20px; }
-    .component.panelEx.leftShadow > .shadow.left {
+    .mag-component-panel.leftShadow > .shadow.left {
         display: block; }
-    .component.panelEx.rightShadow > .shadow.right {
+    .mag-component-panel.rightShadow > .shadow.right {
         display: block; }
-    .component.panelEx.active > .shadow {
+    .mag-component-panel.active > .shadow {
         z-index: 1; }
