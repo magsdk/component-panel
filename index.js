@@ -74,6 +74,8 @@ function Panel ( config ) {
     // parent constructor call
     Component.call(this, config);
 
+    this.$node.classList.add('theme-main theme-panel');
+
     // add special class to set component size
     if ( config.size ) {
         this.size = config.size;
@@ -104,7 +106,7 @@ function Panel ( config ) {
             config.title = [config.title];
         }
         this.$title = new Layout ({
-            className: 'title',
+            className: 'title theme-header theme-title',
             data: config.title,
             focusable: false
         });
