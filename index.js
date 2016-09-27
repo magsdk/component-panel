@@ -74,7 +74,8 @@ function Panel ( config ) {
     // parent constructor call
     Component.call(this, config);
 
-    this.$node.classList.add('theme-main theme-panel');
+    this.$node.classList.add('theme-main');
+    this.$node.classList.add('theme-panel');
 
     // add special class to set component size
     if ( config.size ) {
