@@ -44,9 +44,6 @@
         height: $panelTitleHeight;
         line-height: $panelTitleHeight;
         font-size: $fontSize * 0.9;
-        .icon {
-            font-size: $fontSize * 1.75;
-        }
     }
     &.main {
         width: $panelMainWidth;
@@ -58,9 +55,6 @@
             height: $panelMainTitleHeight;
             line-height: $panelMainTitleHeight;
             font-size: $fontSize;
-            .icon {
-                font-size: $fontSize * 1.25;
-            }
         }
         > .title {
             height: $panelMainTitleHeight;
@@ -92,15 +86,9 @@
         top: 0;
         left: 0;
     }
-    .stb-component-scrollbar {
-        display: none;
-    }
     &.active {
         > .overlay {
             visibility: hidden;
-        }
-        .stb-component-scrollbar {
-            display: block;
         }
     }
     &.top {
