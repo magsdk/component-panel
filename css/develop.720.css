@@ -39,8 +39,6 @@
         height: 56px;
         line-height: 56px;
         font-size: 19.8px; }
-        .mag-component-panel .mag-component-list .item .icon {
-            font-size: 38.5px; }
     .mag-component-panel.main {
         width: 480px;
         top: 68px;
@@ -51,8 +49,6 @@
             height: 68px;
             line-height: 68px;
             font-size: 22px; }
-            .mag-component-panel.main .mag-component-list .item .icon {
-                font-size: 27.5px; }
         .mag-component-panel.main > .title {
             height: 68px;
             line-height: 68px;
@@ -73,12 +69,8 @@
         position: absolute;
         top: 0;
         left: 0; }
-    .mag-component-panel .stb-component-scrollbar {
-        display: none; }
     .mag-component-panel.active > .overlay {
         visibility: hidden; }
-    .mag-component-panel.active .stb-component-scrollbar {
-        display: block; }
     .mag-component-panel.top {
         z-index: 3; }
     .mag-component-panel > .shadow {
