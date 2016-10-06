@@ -109,8 +109,8 @@
                 float: right;
                 height: 18px;
                 min-width: 10px;
-                -webkit-border-radius: 50%;
-                border-radius: 50%;
+                -webkit-border-radius: 100px;
+                border-radius: 100px;
                 font-size: 16.2px;
                 padding: 0 4.5px;
                 line-height: 21.96px; }

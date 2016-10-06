@@ -33,8 +33,8 @@
                 float: right;
                 height: $panelAmountHeight;
                 min-width: $panelAmountWidth;
-                -webkit-border-radius: 50%;
-                border-radius: 50%;
+                -webkit-border-radius: 100px;
+                border-radius: 100px;
                 font-size: $fontSize * 0.9;
                 padding: 0 $panelAmountHeight/4;
                 line-height: $fontSize * 1.22;
