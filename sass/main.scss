@@ -3,6 +3,7 @@
 
 @import "body";
 @import "../node_modules/stb-component/sass/main";
+@import "../node_modules/mag-component-layout/sass/body";
 
 .mag-component-panel {
     @include stb-component-release;

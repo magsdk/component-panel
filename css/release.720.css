@@ -13,6 +13,8 @@
     .mag-component-panel > .body {
         overflow: hidden; }
     .mag-component-panel > .title {
+        display: table;
+        width: 100%;
         height: 56px;
         line-height: 56px;
         position: relative;
@@ -21,6 +23,11 @@
         background-repeat: repeat-x;
         overflow: hidden;
         text-overflow: ellipsis; }
+        .mag-component-panel > .title > div {
+            display: table-cell;
+            text-align: left;
+            vertical-align: middle;
+            height: 100%; }
         .mag-component-panel > .title .name {
             text-transform: uppercase; }
         .mag-component-panel > .title .amountContainer {

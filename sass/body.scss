@@ -13,6 +13,7 @@
         overflow: hidden;
     }
     > .title {
+        @include mag-component-layout;
         height: $panelTitleHeight;
         line-height: $panelTitleHeight;
         position: relative;
