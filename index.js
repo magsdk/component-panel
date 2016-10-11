@@ -91,8 +91,8 @@ function Panel ( config ) {
 
     // create elements to set as component shadow
     this.$shadow = {
-        left:document.createElement('div'),
-        right:document.createElement('div')
+        left: document.createElement('div'),
+        right: document.createElement('div')
     };
 
     this.$shadow.left.className = 'shadow left';
@@ -106,7 +106,7 @@ function Panel ( config ) {
         if ( !Array.isArray(config.title) ) {
             config.title = [config.title];
         }
-        this.$title = new Layout ({
+        this.$title = new Layout({
             //className: 'title theme-header theme-title',
             className: 'title',
             data: config.title,

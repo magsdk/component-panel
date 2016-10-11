@@ -22,6 +22,8 @@
         background-repeat: repeat-x;
         overflow: hidden;
         text-overflow: ellipsis;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
 
         .name {
             text-transform: uppercase;

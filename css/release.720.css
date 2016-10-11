@@ -22,7 +22,9 @@
         padding-right: 20px;
         background-repeat: repeat-x;
         overflow: hidden;
-        text-overflow: ellipsis; }
+        text-overflow: ellipsis;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box; }
         .mag-component-panel > .title > div {
             display: table-cell;
             text-align: left;
