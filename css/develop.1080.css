@@ -33,6 +33,7 @@
             vertical-align: middle;
             height: 100%; }
         .mag-component-panel > .title .name {
+            max-width: 585px;
             text-transform: uppercase; }
         .mag-component-panel > .title .amountContainer {
             width: 135px; }

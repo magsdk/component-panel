@@ -26,6 +26,7 @@
         box-sizing: border-box;
 
         .name {
+            max-width: $panelMainWidth - $panelAmountCWidth;
             text-transform: uppercase;
         }
 
