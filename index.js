@@ -168,7 +168,6 @@ Panel.prototype.focus = function () {
         this.parent.panels[0].$node.classList.remove('expand');
         this.$node.classList.add('expand');
     }
-
 };
 
 /**
