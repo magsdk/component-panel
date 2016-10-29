@@ -18,7 +18,7 @@
     },
     "dependencies": {
         "mag-component-layout": "magsdk/component-layout",
-        "stb-component": "stbsdk/component"
+        "stb-component": "1.*.*"
     },
     "devDependencies": {
         "eslint": "3.*.*",
