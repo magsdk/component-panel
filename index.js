@@ -60,9 +60,12 @@ function Panel ( config ) {
     this.index = 0;
 
     if ( DEVELOP ) {
-        if ( typeof config !== 'object' ) { throw new Error(__filename + ': wrong config type'); }
-        // init parameters checks
-        if ( config.className && typeof config.className !== 'string' ) { throw new Error(__filename + ': wrong or empty config.className'); }
+        if ( typeof config !== 'object' ) {
+            throw new Error(__filename + ': wrong config type');
+        }
+        if ( config.hasOwnProperty('className') && typeof config.className !== 'string' ) {
+            throw new Error(__filename + ': wrong config.className, must be string');
+        }
     }
 
     // set default className if classList property empty or undefined
@@ -148,25 +151,27 @@ Panel.prototype.defaultEvents = {
  * Redefine default component focus to set panel as active even when give focus to children components
  */
 Panel.prototype.focus = function () {
-    this.parent.panels[this.parent.focusIndex].$node.classList.remove('active');
-    this.parent.panels[this.parent.focusIndex].$node.classList.remove('top');
-    Component.prototype.focus.call(this);
-    this.parent.focusIndex = this.index;
-    this.$node.classList.add('active');
-    this.$node.classList.add('top');
-    if ( this.index === 0 && this.parent.panels[1] && this.parent.panels[1].main ) {
-        this.parent.panels[1].$node.classList.remove('position-left');
-        this.parent.panels[1].$node.classList.add('position-right');
-        if ( this.parent.panels[2] ) {
-            this.parent.panels[2].$node.classList.remove('expand');
-        }
-        this.$node.classList.add('expand');
+    if ( this.focusable ) {
+        this.parent.panels[this.parent.focusIndex].$node.classList.remove('active');
+        this.parent.panels[this.parent.focusIndex].$node.classList.remove('top');
+        Component.prototype.focus.call(this);
+        this.parent.focusIndex = this.index;
+        this.$node.classList.add('active');
+        this.$node.classList.add('top');
+        if ( this.index === 0 && this.parent.panels[1] && this.parent.panels[1].main ) {
+            this.parent.panels[1].$node.classList.remove('position-left');
+            this.parent.panels[1].$node.classList.add('position-right');
+            if ( this.parent.panels[2] ) {
+                this.parent.panels[2].$node.classList.remove('expand');
+            }
+            this.$node.classList.add('expand');
 
-    } else if ( this.index === 2 && this.parent.panels[1].main ) {
-        this.parent.panels[1].$node.classList.remove('position-right');
-        this.parent.panels[1].$node.classList.add('position-left');
-        this.parent.panels[0].$node.classList.remove('expand');
-        this.$node.classList.add('expand');
+        } else if ( this.index === 2 && this.parent.panels[1].main ) {
+            this.parent.panels[1].$node.classList.remove('position-right');
+            this.parent.panels[1].$node.classList.add('position-left');
+            this.parent.panels[0].$node.classList.remove('expand');
+            this.$node.classList.add('expand');
+        }
     }
 };
 
