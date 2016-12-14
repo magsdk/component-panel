@@ -63,8 +63,9 @@ function Panel ( config ) {
         if ( typeof config !== 'object' ) {
             throw new Error(__filename + ': wrong config type');
         }
-        if ( config.hasOwnProperty('className') && typeof config.className !== 'string' ) {
-            throw new Error(__filename + ': wrong config.className, must be a string');
+        // init parameters checks
+        if ( 'className' in config && (!config.className || typeof config.className !== 'string') ) {
+            throw new Error(__filename + ': wrong or empty config.className');
         }
     }
 
