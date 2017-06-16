@@ -140,7 +140,7 @@ Panel.prototype.name = 'mag-component-panel';
  * @type {{focus: Function}} try to focus first child component if it present
  */
 Panel.prototype.defaultEvents = {
-    focus : function () {
+    focus: function () {
         if ( this.children.length ) {
             this.children[0].focus();
         }
