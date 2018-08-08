@@ -21,9 +21,8 @@
         "stb-component": "1.*.*"
     },
     "devDependencies": {
-        "eslint": "4.*.*",
         "jsdoc": "3.*.*",
-        "mag-eslint-config": "1.*.*"
+        "mag-eslint": "^1.0.0"
     },
     "keywords": [
         "mag",
