@@ -28,6 +28,7 @@ var Panel = require('mag-component-panel');
 ```
 
 Create instance with custom config:
+
 ```js
 var panel = new Panel({
         title: [
