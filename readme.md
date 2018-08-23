@@ -8,7 +8,8 @@ Panel component
 [![Gitter](https://img.shields.io/badge/gitter-join%20chat-blue.svg?style=flat-square)](https://gitter.im/DarkPark/magsdk)
 
 
-Panel is a component to build user interface, an instance of [Component](https://github.com/stbsdk/component) module.
+Panel is a component to build user interface, an instance of [Component](https://github.com/stbsdk/component) module. Recommended to use with [component-panel-set](https://github.com/magsdk/component-panel-set).
+
 
 
 ## Installation ##
@@ -20,10 +21,34 @@ npm install mag-component-panel
 
 ## Usage ##
 
-Add the singleton to the scope:
+Add the constructor to the scope:
 
 ```js
-var panel = require('mag-component-panel');
+var Panel = require('mag-component-panel');
+```
+
+Create instance with custom config:
+
+```js
+var panel = new Panel({
+        title: [
+            {
+                value: _('Menu'),
+                className: 'name'
+            }
+        ],
+        events: {
+            focus: function () {}
+        },
+        children: [
+            new LayoutList({
+                cycle: true,
+                data: [],
+                fixedData: true,
+                size: 6
+            })
+        ]
+    });
 ```
 
 
