@@ -21,18 +21,17 @@ var Component = require('stb-component'),
  * @param {boolean} [config.size=1] - size of panel width
  *
  * @example
- *
  * main = new Panel({
- *             size: 1,
- *             title: ['Left Panel', {className: 'info'}],
- *             main: true,
- *             children: [
- *                 new List({
- *                     data: ['1 bla', '2 bro', '3 car', '4 hoho', 'Search'],
- *                     size: 5
- *                 })
- *             ]
- *         });
+ *     size: 1,
+ *     title: ['Left Panel', {className: 'info'}],
+ *     main: true,
+ *     children: [
+ *         new List({
+ *             data: ['1 bla', '2 bro', '3 car', '4 hoho', 'Search'],
+ *             size: 5
+ *         })
+ *     ]
+ * });
  */
 function Panel ( config ) {
     var $overlay;
@@ -138,7 +137,7 @@ Panel.prototype.name = 'mag-component-panel';
 
 
 /**
- * Default events.
+ * Define default events.
  *
  * @type {{focus: Function}} try to focus first child component if it present
  */
