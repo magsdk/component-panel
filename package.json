@@ -1,6 +1,6 @@
 {
     "name": "mag-component-panel",
-    "version": "1.0.6",
+    "version": "2.0.0",
     "description": "Base panel implementation.",
     "author": {
         "name": "Stanislav Kalashnik",
