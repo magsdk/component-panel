@@ -10,28 +10,28 @@
 var Component = require('stb-component'),
     Layout = require('mag-component-layout');
 
-/**
- * Extended panel implementation
 
+/**
+ * Extended panel implementation.
+ *
  * @constructor
  * @extends Component
- * @param {Object} [config={}] init parameters (all inherited from the parent)
- * @param {boolean} [config.main=false] set panel as main
- * @param {boolean} [config.size=1] size of panel width
+ * @param {Object} [config={}] - init parameters (all inherited from the parent)
+ * @param {boolean} [config.main=false] - set panel as main
+ * @param {boolean} [config.size=1] - size of panel width
  *
  * @example
- *
  * main = new Panel({
- *            size: 1,
- *             title: ['Left Panel', {className: 'info'}],
- *             main:true,
- *             children:[
- *                 new List({
- *                     data:['1 bla', '2 bro', '3 car', '4 hoho', 'Search'],
- *                     size:5
- *                 })
- *             ]
- *         });
+ *     size: 1,
+ *     title: ['Left Panel', {className: 'info'}],
+ *     main: true,
+ *     children: [
+ *         new List({
+ *             data: ['1 bla', '2 bro', '3 car', '4 hoho', 'Search'],
+ *             size: 5
+ *         })
+ *     ]
+ * });
  */
 function Panel ( config ) {
     var $overlay;
@@ -39,21 +39,21 @@ function Panel ( config ) {
     config = config || {};
 
     /**
-     * Size of panel
+     * Size of panel.
      *
      * @type {number}
      */
     this.size = 1;
 
     /**
-     * Set panel as main
+     * Set panel as main.
      *
      * @type {boolean}
      */
     this.main = false;
 
     /**
-     * Index in panel set
+     * Index in panel set.
      *
      * @type {number}
      */
@@ -93,30 +93,31 @@ function Panel ( config ) {
         this.$node.classList.add('main');
     }
 
-    // create elements to set as component shadow
-    this.$shadow = {
-        left: document.createElement('div'),
-        right: document.createElement('div')
+    // create elements to set as component shadows
+    this.shadows = {
+        $left: document.createElement('div'),
+        $right: document.createElement('div')
     };
 
-    this.$shadow.left.className = 'shadow left';
-    this.$node.appendChild(this.$shadow.left);
+    this.shadows.$left.className = 'shadow left';
+    this.$node.appendChild(this.shadows.$left);
 
-    this.$shadow.right.className = 'shadow right';
-    this.$node.appendChild(this.$shadow.right);
+    this.shadows.$right.className = 'shadow right';
+    this.$node.appendChild(this.shadows.$right);
 
     // add title to panel
     if ( config.title ) {
         if ( !Array.isArray(config.title) ) {
             config.title = [config.title];
         }
-        this.$title = new Layout({
+
+        this.title = new Layout({
             //className: 'title theme-header theme-title',
             className: 'title',
             data: config.title,
             focusable: false
         });
-        this.$node.appendChild(this.$title.$node);
+        this.$node.appendChild(this.title.$node);
     }
 
     this.$node.appendChild(this.$body);
@@ -125,6 +126,7 @@ function Panel ( config ) {
     $overlay.className = 'overlay';
     this.$node.appendChild($overlay);
 }
+
 
 // inheritance
 Panel.prototype = Object.create(Component.prototype);
@@ -135,7 +137,7 @@ Panel.prototype.name = 'mag-component-panel';
 
 
 /**
- * Default events
+ * Define default events.
  *
  * @type {{focus: Function}} try to focus first child component if it present
  */
@@ -149,24 +151,28 @@ Panel.prototype.defaultEvents = {
 
 
 /**
- * Redefine default component focus to set panel as active even when give focus to children components
+ * Redefine default component focus to set panel as active even when give focus to children components.
  */
 Panel.prototype.focus = function () {
     if ( this.focusable ) {
         this.parent.panels[this.parent.focusIndex].$node.classList.remove('active');
         this.parent.panels[this.parent.focusIndex].$node.classList.remove('top');
+
         Component.prototype.focus.call(this);
+
         this.parent.focusIndex = this.index;
         this.$node.classList.add('active');
         this.$node.classList.add('top');
+
         if ( this.index === 0 && this.parent.panels[1] && this.parent.panels[1].main ) {
             this.parent.panels[1].$node.classList.remove('position-left');
             this.parent.panels[1].$node.classList.add('position-right');
+
             if ( this.parent.panels[2] ) {
                 this.parent.panels[2].$node.classList.remove('expand');
             }
-            this.$node.classList.add('expand');
 
+            this.$node.classList.add('expand');
         } else if ( this.index === 2 && this.parent.panels[1].main ) {
             this.parent.panels[1].$node.classList.remove('position-right');
             this.parent.panels[1].$node.classList.add('position-left');
@@ -176,8 +182,9 @@ Panel.prototype.focus = function () {
     }
 };
 
+
 /**
- * Blur panel
+ * Blur panel.
  */
 Panel.prototype.blur = function () {
     this.parent.panels[this.parent.focusIndex].$node.classList.remove('active');
