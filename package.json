@@ -22,7 +22,7 @@
     },
     "devDependencies": {
         "jsdoc": "^3.5.5",
-        "mag-eslint": "^1.0.1"
+        "mag-eslint": "^1.0.2"
     },
     "keywords": [
         "mag",
