@@ -16,9 +16,9 @@ var Component = require('stb-component'),
  *
  * @constructor
  * @extends Component
- * @param {Object} [config={}] init parameters (all inherited from the parent)
- * @param {boolean} [config.main=false] set panel as main
- * @param {boolean} [config.size=1] size of panel width
+ * @param {Object} [config={}] - init parameters (all inherited from the parent)
+ * @param {boolean} [config.main=false] - set panel as main
+ * @param {boolean} [config.size=1] - size of panel width
  *
  * @example
  *
